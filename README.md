@@ -12,7 +12,7 @@
 
 # 3. 구현화면
 ![예시화면1](https://github.com/yms1997/Myproject-doing/blob/main/images/%EC%98%88%EC%8B%9C1.jpg)
-![예시화면2](https://github.com/yms1997/Myproject-doing/blob/main/images/%EC%98%88%EC%8B%9C1.jpg)
-![예시화면3](https://github.com/yms1997/Myproject-doing/blob/main/images/%EC%98%88%EC%8B%9C1.jpg)
+![예시화면2](https://github.com/yms1997/Myproject-doing/blob/main/images/%EC%98%88%EC%8B%9C2.jpg)
+![예시화면3](https://github.com/yms1997/Myproject-doing/blob/main/images/%EC%98%88%EC%8B%9C3.jpg)
 # 4. 발견된 버그
 #### 4-1 페달에 공이 닿았을때 튕겨져 나가지않고 페달에 묻히다 밑으로 떨어짐 (수정중)
