@@ -10,6 +10,9 @@
 ![예시화면1](https://github.com/yms1997/Myproject-doing/blob/main/images/%EC%98%88%EC%8B%9C1.jpg)
 ![예시화면2](https://github.com/yms1997/Myproject-doing/blob/main/images/%EC%98%88%EC%8B%9C2.jpg)
 ![예시화면3](https://github.com/yms1997/Myproject-doing/blob/main/images/%EC%98%88%EC%8B%9C3.jpg)
+![예시화면4]
+![예시화면5]
+![예시화면6]
 
 # 4. 구현된 기능들
 4-1 게임시작 버튼
