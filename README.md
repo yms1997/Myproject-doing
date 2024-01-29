@@ -10,9 +10,9 @@
 ![예시화면1](https://github.com/yms1997/Myproject-doing/blob/main/images/%EC%98%88%EC%8B%9C1.jpg)
 ![예시화면2](https://github.com/yms1997/Myproject-doing/blob/main/images/%EC%98%88%EC%8B%9C2.jpg)
 ![예시화면3](https://github.com/yms1997/Myproject-doing/blob/main/images/%EC%98%88%EC%8B%9C3.jpg)
-![예시화면4]
-![예시화면5]
-![예시화면6]
+![예시화면4](https://github.com/yms1997/Myproject-doing/blob/main/images/%EC%98%88%EC%8B%9C4.jpg)
+![예시화면5](https://github.com/yms1997/Myproject-doing/blob/main/images/%EC%98%88%EC%8B%9C5.jpg)
+![예시화면6](https://github.com/yms1997/Myproject-doing/blob/main/images/%EC%98%88%EC%8B%9C6.jpg)
 
 # 4. 구현된 기능들
 4-1 게임시작 버튼
@@ -23,13 +23,13 @@
 
 4-4 라이프 기능
 
+4-5 난이도 설정 버튼
+
+4-6 난이도 설정 후 그에 맞는 스테이지 셋팅
+
 # 5. 구현해야할 기능들
 
 5-1 마우스 포인터 페달에 잠그는 기능
-
-5-2 난이도 설정 버튼
-
-5-3 난이도 설정 후 그에 맞는 스테이지 셋팅
 
 # 6. 발견된 버그
 **5-1 페달에 공이 닿았을때 튕겨져 나가지않고 페달에 묻히다 밑으로 떨어짐 (수정중)**
