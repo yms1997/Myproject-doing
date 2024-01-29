@@ -6,7 +6,7 @@ body{
   position: relative;
 }
 canvas {
-	background: #eee;
+	background: #000000;
 	display: block;
 	margin: 0 auto;
   opacity: 0;
@@ -15,15 +15,32 @@ canvas {
 }
 button {
   border: none;
-  background-color: rgba(233, 123, 123, 0.6);
-  width: 200px;
-  height: 100px;
+  width: 128px;
+  height: 128px;
   border-radius: 20px;
   font-size: 30px;
   font-weight: 600;
+  background: url('./images/free-icon-start-button-5261874.png') no-repeat;
+  background-size: cover;
   cursor: pointer;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+#difficulty{
+  display: block;
+  margin: auto;
+  width: 200px;
+  padding: .8em .5em;
+  border: 1px solid #999;
+  font-family: inherit;
+  background: url('./images/arrow.jpg') no-repeat 95% 50%;
+  border-radius: 0px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+select::-ms-expand {
+  display: none;
 }

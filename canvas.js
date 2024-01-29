@@ -1,6 +1,8 @@
 const canvas = document.querySelector("#canvas");
 const ctx = canvas.getContext("2d");
 const gameBtn = document.querySelector('#start');
+const diffBox = document.querySelector('#difficulty');
+
 
 // 기본셋팅
 let x = canvas.width / 2;
@@ -11,7 +13,7 @@ let dy = -1;
 let ballSpeed = 1;
 // paddle(밑에 움직이는 막대기같은거)
 let paddleHeight = 10;
-let paddleWidth = 75;
+let paddleWidth = 100;
 let paddleX = (canvas.width - paddleWidth) / 2;
 // key(event)
 let key = {"ArrowRight": false, "ArrowLeft": false};
@@ -43,8 +45,8 @@ function applydifficulty(){
   switch(difficulty){
     case "easy":
       // 벽돌
-      brickRowCount = 1;
-      brickColumnCount = 1;
+      brickRowCount = 3;
+      brickColumnCount = 9;
       // 생명
       lives = 5;
       // 페달
@@ -54,8 +56,8 @@ function applydifficulty(){
       break;
     case "hard":
       // 벽돌
-      brickRowCount = 7;
-      brickColumnCount = 9;
+      brickRowCount = 1;
+      brickColumnCount = 1;
       // 생명
       lives = 1;
       // 페달
@@ -67,7 +69,7 @@ function applydifficulty(){
       // 벽돌
       brickRowCount = 5;
       brickColumnCount = 9;
-      ballSpeed = 1.5;
+      ballSpeed = 2;
   }
   
   createBricks(brickColumnCount , brickRowCount);
@@ -81,7 +83,7 @@ function reset(){
   dy = -1;
   ballSpeed = 1;
   paddleHeight = 10;
-  paddleWidth = 75;
+  paddleWidth = 100;
   paddleX = (canvas.width - paddleWidth) / 2;
   key = {"ArrowRight": false, "ArrowLeft": false};
   brickRowCount = 0;
@@ -108,13 +110,13 @@ function createBricks(brickColumnCount , brickRowCount){
 
 function drawScore(){
   ctx.font = '16px Arilal';
-  ctx.fillStyle = '#0095DD';
+  ctx.fillStyle = 'white';
   ctx.fillText("Score: " + score, 8, 20);
 }
 
 function drawLives(){
   ctx.font = '16px Arilal';
-  ctx.fillStyle = '#0095DD';
+  ctx.fillStyle = 'white';
   ctx.fillText("Lives: " + lives, canvas.width - 65, 20);
 }
 
@@ -136,7 +138,11 @@ function drawBricks(){
         bricks[c][r].y = brickY;
         ctx.beginPath();
         ctx.rect(brickX, brickY, brickWidth, brickHeight);
-        ctx.fillStyle = '#0095DD';
+        ctx.fillStyle = "white";
+        ctx.shadowColor = "green";
+        ctx.shadowBlur = 5;
+        ctx.shadowOffsetX = 2;
+        ctx.shadowOffsetY = 2;
         ctx.fill();
         ctx.closePath();
       }
@@ -171,7 +177,11 @@ function keyHandler(e, value){
 function drawPaddle(){
   ctx.beginPath();
   ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
-  ctx.fillStyle = '#222222';
+  ctx.fillStyle = 'white';
+  ctx.shadowColor = "green";
+  ctx.shadowBlur = 5;
+  ctx.shadowOffsetX = 2;
+  ctx.shadowOffsetY = 2;
   ctx.fill();
   ctx.closePath();
 }
@@ -179,16 +189,19 @@ function drawPaddle(){
 function drawBall(){
   ctx.beginPath();
   ctx.arc(x, y, ballRadius, 0, Math.PI * 2, false);
-  ctx.fillStyle = 'blue';
+  ctx.fillStyle = 'white';
+  ctx.shadowColor = "green";
+  ctx.shadowBlur = 5;
+  ctx.shadowOffsetX = 2;
+  ctx.shadowOffsetY = 2;
   ctx.fill();
-  ctx.strokeStyle = 'red';
-  ctx.stroke();
   ctx.closePath();
 }
 function draw(){
   gameBtn.style.display = 'none';
   canvas.style.opacity = 1;
   // canvas.style.cursor = "none";
+  diffBox.style.display = "none";
   ctx.clearRect(0, 0, canvas.width, canvas.height)
   drawBricks();
   drawBall();
@@ -227,7 +240,7 @@ function draw(){
     // document.location.reload();
     canvas.style.opacity = 0;
     gameBtn.style.display = "block";
-    gameBtn.innerText = "다시하기";
+    diffBox.style.display = 'block';
     gameBtn.addEventListener('click', () => {
       reset();
       applydifficulty();
